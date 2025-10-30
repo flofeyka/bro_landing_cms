@@ -18,4 +18,8 @@ export class TextRdo {
   @IsString()
   @Expose()
   language: Language;
+
+  @IsString()
+  @Expose()
+  source: 'database' | 'original';
 }
