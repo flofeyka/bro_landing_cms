@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from 'prisma/prisma.service';
 import { Language } from '@prisma/client';
 
@@ -9,19 +9,14 @@ import { TextRdo } from './rdo/text.rdo';
 import { fillDto } from 'utils/fillDto';
 import { TextsRdo } from './rdo/texts.rdo';
 import { v4 as uuidv4 } from 'uuid';
+import { SuccessRdo } from '../../utils/rdo/success.rdo';
 
 @Injectable()
 export class TextService {
   private locales: Map<string, any> = new Map();
-  defaultLocale = 'ru';
 
   constructor(private readonly prisma: PrismaService) {
     this.loadLocales();
-  }
-
-  private loadLocales(): void {
-    this.locales.set('ru', ruLocale);
-    this.locales.set('en', enLocale);
   }
 
   /**
@@ -32,7 +27,7 @@ export class TextService {
       where: { language },
     });
 
-    const result = this.locales.get(language.toLowerCase());
+    const result: object = this.locales.get(language.toLowerCase());
 
     for (const text of dbTexts) {
       this.setNestedValue(result, text.code, text.value);
@@ -48,17 +43,36 @@ export class TextService {
       create: { code, language, value },
       update: { value },
     });
+
+    const result: object = this.locales.get(language.toLowerCase());
+    this.setNestedValue(result, text.code, text.value);
     return fillDto(TextRdo, text);
   }
 
+  async resetText(language: Language, code: string): Promise<SuccessRdo> {
+    try {
+      await this.prisma.text.delete({
+        where: { code_language: { language, code } },
+      });
+
+      const result = this.locales.get(language.toLowerCase());
+      const value = this.getValueFromLocale(language, code);
+      this.setNestedValue(result, code, value);
+
+      return fillDto(SuccessRdo, { success: true });
+    } catch (e) {
+      console.error('Cannot delete the text:', e);
+      throw new NotFoundException('Text not found');
+    }
+  }
+
   async getTextsByValueOrKey(
-    search: string,
+    search?: string,
     page: number = 1,
     limit: number = 10,
   ): Promise<TextsRdo> {
     const skip = (page - 1) * limit;
 
-    // Получаем все записи из базы данных по поисковому запросу
     const dbTexts = await this.prisma.text.findMany({
       where: {
         OR: [
@@ -80,7 +94,6 @@ export class TextService {
 
     const resultMap = new Map<string, TextRdo>();
 
-    // Добавляем все записи из базы данных в resultMap
     for (const text of dbTexts) {
       const key = `${text.code}_${text.language}`;
       resultMap.set(key, {
@@ -88,6 +101,7 @@ export class TextService {
         code: text.code,
         value: text.value,
         language: text.language,
+        source: 'database',
       });
     }
 
@@ -103,6 +117,7 @@ export class TextService {
             code,
             value,
             language: language.toUpperCase() as Language,
+            source: 'original',
           });
         }
       }
@@ -112,28 +127,27 @@ export class TextService {
 
     // П реобразуем map в массив
     const fullList = values.filter(
-      (val, index) =>
-        index ===
-        values.findIndex(
-          (t) => t.code === val.code && t.language === val.language,
-        ),
+      (val) => val.code.indexOf(search || '') > -1,
     );
+    //   .filter(
+    //   (val, index) =>
+    //     index ===
+    //     values.findIndex(
+    //       (t) => t.code === val.code && t.language === val.language,
+    //     ),
+    // );
 
-    // Получаем общее количество записей для расчета количества страниц
-    const totalRecords = fullList.length;
-
-    // Пагинируем fullList, ограничивая его по лимиту и смещению (skip)
     const paginatedList = fullList.slice(skip, skip + limit);
-
-    // Рассчитываем общее количество страниц
-    const totalPages = Math.ceil(totalRecords / limit);
 
     return fillDto(TextsRdo, {
       texts: paginatedList,
-      page,
-      totalPages,
-      totalRecords,
+      total: fullList.length,
     });
+  }
+
+  private loadLocales(): void {
+    this.locales.set('ru', structuredClone(ruLocale));
+    this.locales.set('en', structuredClone(enLocale));
   }
 
   /**
@@ -155,6 +169,37 @@ export class TextService {
         current = current[key];
       }
     }
+  }
+
+  private getValueFromLocale(language: Language, code: string): string {
+    type Locale = {
+      [key: string]: string | { [key: string]: any };
+    };
+
+    // Получаем начальный объект с правильным типом
+    const initialLocale: Locale =
+      language === Language.RU ? ruLocale : enLocale;
+
+    // Разбиваем код на ключи
+    const keys = code.split('.');
+    let value: Locale | string = initialLocale;
+
+    // Итерируемся по ключам
+    for (const key of keys) {
+      // Проверяем существование ключа
+      if (typeof value === 'object' && value !== null && key in value) {
+        value = value[key];
+      } else {
+        throw new Error(`Ключ ${key} не найден в локации`);
+      }
+    }
+
+    // Убеждаемся, что результат - строка
+    if (typeof value !== 'string') {
+      throw new Error('Полученное значение не является строкой');
+    }
+
+    return value;
   }
 
   private flatten(obj: any, prefix = ''): [string, string][] {
