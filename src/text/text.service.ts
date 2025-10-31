@@ -125,17 +125,24 @@ export class TextService {
 
     const values = Array.from(resultMap.values());
 
-    // П реобразуем map в массив
-    const fullList = values.filter(
-      (val) => val.code.indexOf(search || '') > -1,
-    );
-    //   .filter(
-    //   (val, index) =>
-    //     index ===
-    //     values.findIndex(
-    //       (t) => t.code === val.code && t.language === val.language,
-    //     ),
-    // );
+    const fullList = values
+      .filter(
+        (val, index) =>
+          index ===
+          values.findIndex(
+            (t) => t.code === val.code && t.language === val.language,
+          ),
+      )
+      .filter((val) => {
+        const searchTerm = search || '';
+        return (
+          val.code
+            ?.toString()
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()) ||
+          val.value?.toString().toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      });
 
     const paginatedList = fullList.slice(skip, skip + limit);
 
