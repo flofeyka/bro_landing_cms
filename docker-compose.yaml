@@ -1,4 +1,4 @@
-version: '3'
+version: '3.9'
 
 services:
   backend:
@@ -8,3 +8,23 @@ services:
       - .env
     ports:
       - '3000:3000'
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@db:5432/bro_crypto
+
+  db:
+    image: postgres:15-alpine
+    container_name: bro_crypto_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: bro_crypto
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
