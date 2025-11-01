@@ -6,6 +6,7 @@ import {
   Param,
   Post,
   Query,
+  UseGuards,
 } from '@nestjs/common';
 import { CreateTextDto } from './dto/create-text.dto';
 import { TextRdo } from './rdo/text.rdo';
@@ -15,22 +16,26 @@ import { TextsRdo } from './rdo/texts.rdo';
 import { ResetTextDto } from './dto/reset-text.dto';
 import { FetchTextsDto } from './dto/fetch-texts.dto';
 import { SuccessRdo } from '../../utils/rdo/success.rdo';
+import { JwtAuthGuard } from '../auth/auth.guard';
 
 @Controller('text')
 export class TextController {
   constructor(private readonly textService: TextService) {}
 
   @Post('/')
+  @UseGuards(JwtAuthGuard)
   createText(@Body() dto: CreateTextDto): Promise<TextRdo> {
     return this.textService.createText(dto);
   }
 
   @Delete('/:language/:code')
+  @UseGuards(JwtAuthGuard)
   resetValue(@Param() dto: ResetTextDto): Promise<SuccessRdo> {
     return this.textService.resetText(dto.language, dto.code);
   }
 
   @Get('/')
+  @UseGuards(JwtAuthGuard)
   getValueByValueOrKey(@Query() dto: FetchTextsDto): Promise<TextsRdo> {
     return this.textService.getTextsByValueOrKey(
       dto.search,
