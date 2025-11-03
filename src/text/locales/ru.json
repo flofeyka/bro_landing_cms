@@ -37,8 +37,8 @@
     "description": "Раскройте реальные сервисы, стоящие за блокчейн-транзакциями"
   },
   "securityBot": {
-    "meaning": "это передовое решение для круглосуточного мониторинга и защиты ваших криптопортфелей.\n\nНаша система в режиме реального времени отслеживает активность на ваших адресах и использует алгоритмы для интеллектуального анализа каждой транзакции. С нами вы получаете полный контроль и можете сосредоточиться на развитии бизнеса, доверив безопасность профессионалам.",
-    "features": "Ключевые преимущества:\n\nМультичейн-мониторинг: Единый дашборд для всех ваших кошельков, работающих в сетях EVM, Solana и Tron.\n\nГибкие оповещения: Настраивайте триггеры, исходя из ваших рисковых моделей: крупные транзакции, операции с подозрительными адресами или аномальная частота.\n\nИнтеграция: Получайте мгновенные уведомления в Telegram, Slack или по email.\n\nАвтоматизированная отчётность: Ежедневные отчёты и удобная интеграция с Google Sheets для аудита и глубокого финансового анализа."
+    "meaning": "это передовое решение для круглосуточного мониторинга и защиты ваших криптопортфелей.",
+    "features": "Наша система в режиме реального времени отслеживает активность на ваших адресах и использует алгоритмы для интеллектуального анализа каждой транзакции. С нами вы получаете полный контроль и можете сосредоточиться на развитии бизнеса, доверив безопасность профессионалам."
   },
   "criminalistics": {
     "crypto_title": "Криптокриминалистика:",
@@ -145,201 +145,200 @@
     ]
   },
   "service_catalog": {
-    "catalog": "Витрина",
-    "service": "услуг",
+    "catalog": "Showcase",
+    "service": "services",
     "services": [
       {
         "id": 1,
-        "title": "Базовая защита от взлома",
-        "decisionTitle": "Аудит и настройка безопасности веб-платформы",
-        "decision": "Клиент столкнулся с риском взлома и отсутствием базовой защиты. Платформа уязвима для распространённых атак, а системный администратор не имел чётких рекомендаций по кибербезопасности.",
-        "functionsTitle": "Что мы делаем",
+        "title": "Basic Anti-Hacking Protection",
+        "decisionTitle": "Service Overview",
+        "decision": "Comprehensive implementation of key cybersecurity measures for your web platform. We ensure reliable protection against the most common threats so you can focus on growing your business.",
+        "functionsTitle": "We Perform",
         "functions": [
-          "Проводим анализ конфигурации инфраструктуры и выявляем слабые места",
-          "Настраиваем HTTPS, WAF и другие защитные протоколы",
-          "Предотвращаем брутфорс, SQL-инъекции и иные типовые атаки",
-          "Обновляем компоненты системы и устраняем уязвимости",
-          "Разрабатываем базовые политики безопасности и управления доступом"
+          "Configuration analysis: Assessment of your infrastructure's current security settings.",
+          "Implementation of protective measures: Setting up HTTPS protocols, web application firewalls (WAF), and other security systems.",
+          "Attack prevention: Protection against brute-force attacks, SQL injections, and other common attack vectors.",
+          "System updates: Updating and patching vulnerabilities in your platform's components.",
+          "Recommendations development: Creating basic access control and security policies."
         ],
-        "conclusionTitle": "Результат",
-        "conclusion": "Ресурс получает надёжную защиту, отражающую до 95% массовых автоматических атак. Система становится устойчивой и безопасной для дальнейшего развития бизнеса."
+        "conclusionTitle": "Outcome",
+        "conclusion": "Your resource receives effective protection capable of withstanding 95% of mass automated cyberattacks."
       },
       {
         "id": 2,
         "title": "SecurityBot",
-        "decisionTitle": "Ваш автоматизированный охранник для криптоактивов",
-        "decision": "Клиентам требуется круглосуточный мониторинг и защита активов от несанкционированных транзакций. SecurityBot обеспечивает мгновенное обнаружение подозрительных действий и предотвращает финансовые потери.",
-        "functionsTitle": "Как работает",
+        "decisionTitle": "Role",
+        "decision": "We provide comprehensive monitoring and protection of your crypto operations 24/7. SecurityBot is an automated tool that ensures early threat detection and prevents financial losses.",
+        "functionsTitle": "How it Works",
         "functions": [
-          "Full-time мониторинг: анализ всех транзакций и кошельков компании в режиме 24/7",
-          "Push-уведомления в Telegram или на почту о подозрительных операциях",
-          "Гибкая настройка правил и лимитов, включая «белые списки» адресов"
+          "Full-time monitoring: Scans all company transactions and wallets in real time.",
+          "Push notifications: Instant alerts via Telegram or email about suspicious activity (large sums, unknown addresses).",
+          "Flexible rule configuration: Ability to customize triggers, set limits, and create \"whitelists\" for precise control."
         ],
-        "conclusionTitle": "Выгода",
-        "conclusion": "Мгновенное реагирование на угрозы, предотвращение вывода активов и значительное снижение операционных рисков."
+        "conclusionTitle": "Benefit",
+        "conclusion": "Immediate response to potential threats, helping prevent asset theft and minimize risks."
       },
       {
         "id": 3,
-        "title": "AML-проверка",
-        "decisionTitle": "Защита ваших операций и репутации",
-        "decision": "Для бизнеса, работающего с криптовалютами, важно соблюдать международные стандарты комплаенса. AML-проверка позволяет убедиться в легитимности контрагентов и избежать взаимодействия с рисковыми адресами.",
-        "functionsTitle": "Процесс",
+        "title": "AML Check",
+        "decisionTitle": "Purpose",
+        "decision": "We ensure the legitimacy of your cryptocurrency operations and their compliance with international standards. Our AML check is a reliable tool for minimizing reputational and legal risks.",
+        "functionsTitle": "Process",
         "functions": [
-          "Проверка контрагентов по базам скомпрометированных и санкционных адресов",
-          "Анализ блокчейн-истории транзакций на предмет связей с нелегальной активностью",
-          "Формирование подробного отчёта с оценкой уровня риска"
+          "Counterparty verification: We check the addresses of your counterparties against current compromised and sanction lists.",
+          "Transaction history analysis: Our team analyzes the blockchain for links to illegal activities such as darknet markets, mixers, hacker groups, and shadow markets.",
+          "Reporting: We provide a detailed risk report that allows you to make informed and safe decisions."
         ],
-        "conclusionTitle": "Для кого",
-        "conclusion": "Подходит криптобизнесам, фондам и инвесторам, для которых важна юридическая чистота и безупречная репутация."
+        "conclusionTitle": "For Whom",
+        "conclusion": "This service is ideal for crypto businesses, funds, and private investors for whom reputation and compliance are top priorities."
       },
       {
         "id": 4,
-        "title": "Аудит инфраструктуры",
-        "decisionTitle": "Комплексная безопасность вашей IT-экосистемы",
-        "decision": "Позволяет выявить уязвимости в сетях, серверах и облачных системах до того, как их обнаружат злоумышленники. Аудит помогает укрепить инфраструктуру и снизить риски утечек.",
-        "functionsTitle": "Области аудита",
+        "title": "Infrastructure Audit",
+        "decisionTitle": "Focus",
+        "decision": "We perform an in-depth check of your company's entire IT infrastructure, going beyond just code audits. Our goal is to identify hidden vulnerabilities that could threaten your assets and reputation.",
+        "functionsTitle": "Audit Areas",
         "functions": [
-          "Сети и серверы: проверка брандмауэров, портов и уязвимостей ОС",
-          "Рабочие станции: аудит антивирусов, шифрования и прав доступа",
-          "Облачные сервисы: анализ IAM, S3-хранилищ и API-ключей",
-          "Резервное копирование: проверка систем бэкапов и восстановления"
+          "Networks and servers: We analyze firewall configurations, check open ports, and look for OS vulnerabilities.",
+          "Workstations: We examine employee computers for up-to-date antivirus solutions, access rights, and encryption policies.",
+          "Cloud services: We evaluate the security of your cloud settings, including access permissions (IAM), storage configurations (S3), and API key usage.",
+          "Backup: We ensure the presence and operability of data backup systems."
         ],
-        "conclusionTitle": "Итог",
-        "conclusion": "Вы получаете детализированный отчёт с приоритизацией уязвимостей и пошаговым планом их устранения."
+        "conclusionTitle": "Result",
+        "conclusion": "You receive a complete and objective picture of vulnerabilities and a detailed action plan to fix them."
       },
       {
         "id": 5,
-        "title": "Криптокриминалистика",
-        "decisionTitle": "Расследование хищений и возврат активов",
-        "decision": "Когда активы были похищены, важна скорость реагирования. Мы проводим трассировку украденных средств и помогаем инициировать процедуру возврата через биржи и правоохранительные органы.",
-        "functionsTitle": "Этапы работы",
+        "title": "Crypto Forensics",
+        "decisionTitle": "Specialization",
+        "decision": "We provide expert support in case of theft or fraud, conducting comprehensive forensic investigations. Our task is to trace stolen assets and recover them through cooperation with exchanges and law enforcement.",
+        "functionsTitle": "Workflow Stages",
         "functions": [
-          "Трассировка средств и построение карты перемещений активов",
-          "Идентификация кошельков злоумышленников и используемых бирж",
-          "Подготовка досье для заморозки и возврата активов"
+          "Tracing: We track the movement of stolen funds on the blockchain, creating a detailed map of their path.",
+          "Analysis and identification: Our specialists identify the attackers' wallets and the exchanges to which funds were transferred.",
+          "Recovery procedure: We prepare a complete dossier to initiate asset freezing and recovery through exchange security services and law enforcement."
         ],
-        "conclusionTitle": "Важно",
-        "conclusion": "Оперативное обращение значительно повышает шансы на успешный возврат активов, однако стопроцентная гарантия невозможна."
+        "conclusionTitle": "Important",
+        "conclusion": "Prompt action greatly increases the chances of successful recovery, though we cannot guarantee 100% success."
       },
       {
         "id": 6,
-        "title": "Обучение команды безопасной работе с криптовалютой",
-        "decisionTitle": "Превратите сотрудников в экспертов по криптобезопасности",
-        "decision": "Человеческий фактор — одна из главных угроз в сфере крипто. Обучение помогает превратить его в надёжный элемент защиты.",
-        "functionsTitle": "Программа обучения",
+        "title": "Team Training on Safe Crypto Practices",
+        "decisionTitle": "Objective",
+        "decision": "Transform human factors from potential risks into a reliable barrier. Our training program is designed to increase awareness and practical skills of your team in crypto security.",
+        "functionsTitle": "Program Includes",
         "functions": [
-          "Теоретические основы: принципы хранения, фишинг, seed-фразы и кошельки",
-          "Практические сценарии с симуляцией атак и социальной инженерии",
-          "Разработка регламентов и процедур безопасных транзакций",
-          "Оценка знаний и сертификация сотрудников"
+          "Theoretical basics: Learning key concepts, from seed phrases and wallet types to phishing attack recognition.",
+          "Practical scenarios: Practicing real social engineering situations to develop critical thinking.",
+          "Operational protocols: Implementing clear procedures for secure transaction handling.",
+          "Knowledge assessment: Testing and certifying employees to confirm acquired competencies."
         ],
-        "conclusionTitle": "Формат",
-        "conclusion": "Интерактивные онлайн-вебинары и воркшопы, адаптированные под специфику компании."
+        "conclusionTitle": "Training Format",
+        "conclusion": "Interactive online webinars, practical workshops, and cyberattack simulations tailored to your company's needs."
       },
       {
         "id": 7,
-        "title": "Крипто-инфраструктура под ключ",
-        "decisionTitle": "Создание надёжной системы управления криптоактивами",
-        "decision": "Комплексное решение для компаний, которым нужна безопасная и масштабируемая инфраструктура. Мы проектируем архитектуру, соответствующую высоким стандартам защиты.",
-        "functionsTitle": "Компоненты решения",
+        "title": "Turnkey Crypto Infrastructure",
+        "decisionTitle": "Solution",
+        "decision": "We create or modernize your crypto asset management system, ensuring compliance with the highest security standards. This is a comprehensive approach covering everything from hardware to internal policies.",
+        "functionsTitle": "Solution Components",
         "functions": [
-          "Безопасное хранение: аппаратные и кастодиальные решения",
-          "Мультиподпись (Multi-Sig) для утверждения транзакций",
-          "Автоматизация процессов и интеграция с SecurityBot",
-          "Внедрение внутренних регламентов безопасности"
+          "Secure storage: Implementing hardware wallets and reliable custodial solutions to protect your assets.",
+          "Multi-signature (Multi-Sig): Setting up multi-factor transaction approvals, mitigating human error risks.",
+          "Process automation: Developing and implementing secure workflows for transaction approvals.",
+          "Integration: Connecting your system to SecurityBot and other monitoring tools for 24/7 oversight."
         ],
-        "conclusionTitle": "Итог",
-        "conclusion": "Вы получаете готовую инфраструктуру с высокой отказоустойчивостью и полной защитой активов."
+        "conclusionTitle": "Outcome",
+        "conclusion": "You get a ready-made, reliable, and scalable system that ensures predictability and resilience of your crypto operations."
       },
       {
         "id": 8,
         "title": "Due Diligence",
-        "decisionTitle": "Проверка проектов перед инвестициями",
-        "decision": "Перед вложениями важно убедиться в надёжности проекта. Мы проводим всестороннюю оценку, чтобы выявить слабые места и предотвратить инвестиционные риски.",
-        "functionsTitle": "Что мы проверяем",
+        "decisionTitle": "Purpose",
+        "decision": "Don't rush to invest until you're confident the project is reliable. Our Due Diligence service helps you thoroughly understand it, ensuring confidence in your investment.",
+        "functionsTitle": "What We Check",
         "functions": [
-          "Технический аудит кода и архитектуры проекта",
-          "Юридическую экспертизу и проверку KYC/AML-политик",
-          "Репутационный анализ команды проекта",
-          "Аудит токеномики и финансовой модели"
+          "Technical audit: Analysis of smart contract code and assessment of project architecture for vulnerabilities.",
+          "Legal review: Examination of project legal structure, KYC/AML policies, and necessary licenses.",
+          "Team analysis: Studying the reputation and public presence of founders and key team members.",
+          "Tokenomics and economics: Detailed analysis of tokenomics to identify signs of fraud or instability."
         ],
-        "conclusionTitle": "Результат",
-        "conclusion": "Подробный отчёт с классификацией рисков и конкретными рекомендациями для принятия инвестиционного решения."
+        "conclusionTitle": "Result",
+        "conclusion": "You receive a comprehensive report containing risk classification and specific recommendations for investment decisions."
       },
       {
         "id": 9,
-        "title": "Экстренное реагирование на инциденты (CIRT)",
-        "decisionTitle": "Скорая помощь при кибератаках",
-        "decision": "Если атака уже идёт, важно действовать немедленно. Мы активируем CIRT-протокол для сдерживания, расследования и устранения последствий инцидента.",
-        "functionsTitle": "План действий",
+        "title": "Incident Response (CIRT)",
+        "decisionTitle": "Emergency Assistance",
+        "decision": "Under attack? Our service is an incident response protocol that activates when an attack occurs. We act promptly to minimize damage and restore your system.",
+        "functionsTitle": "Action Plan",
         "functions": [
-          "Сдерживание: изоляция скомпрометированных систем",
-          "Расследование: анализ точки входа и масштаба ущерба",
-          "Устранение: ликвидация уязвимостей и аннулирование доступа",
-          "Восстановление: возврат инфраструктуры к нормальной работе и внедрение усиленной защиты"
+          "Containment: We immediately isolate compromised systems to stop data leaks and prevent further spread.",
+          "Investigation: Our specialists analyze the entry point and assess the damage accurately.",
+          "Elimination: We fix all vulnerabilities, revoke compromised access, and clean the system completely.",
+          "Recovery: We restore your infrastructure to normal operation, implementing additional protection measures to prevent repeat incidents."
         ],
-        "conclusionTitle": "Доступность",
-        "conclusion": "Круглосуточная поддержка 24/7 по выделенному экстренному каналу связи."
+        "conclusionTitle": "Availability",
+        "conclusion": "We are available 24/7 via an emergency communication channel."
       },
       {
         "id": 10,
-        "title": "Эвайринг для компаний",
-        "decisionTitle": "Приём платежей в криптовалюте",
-        "decision": "Мы предоставляем комплексное решение для интеграции приёма криптовалютных платежей в бизнес-процессы. Наша цель — обеспечить бесшовный и безопасный переход на новый вид расчётов, открывая для вас новые рынки и возможности.",
-        "functionsTitle": "Что входит в услугу",
+        "title": "Crypto Payment Integration for Companies",
+        "decisionTitle": "Objective",
+        "decision": "We provide a comprehensive solution for integrating cryptocurrency payments into your business processes. Our goal is to ensure a seamless and secure transition to a new payment method, opening new markets and opportunities.",
+        "functionsTitle": "Service Includes",
         "functions": [
-          "Интеграция платёжного шлюза — подбор и подключение оптимального провайдера, соответствующего вашим бизнес-задачам.",
-          "Автоматическая конвертация — мгновенный обмен криптовалюты на фиат с зачислением в удобной валюте.",
-          "Юридическое сопровождение — корректное оформление всех операций в рамках действующего законодательства.",
-          "Безопасность — настройка протоколов защиты платёжного трафика и клиентских данных."
+          "Payment gateway integration: We help select and integrate the optimal provider for your business needs.",
+          "Automatic conversion: Set up automatic crypto-to-fiat exchange so you can instantly receive funds in your preferred currency.",
+          "Legal support: We ensure all operations comply with current legislation.",
+          "Security: We configure all necessary protocols to protect payment traffic and customer data."
         ],
-        "conclusionTitle": "Итог",
-        "conclusion": "Ваш бизнес готов принимать криптовалюту как полноценное средство оплаты — быстро, безопасно и юридически корректно."
+        "conclusionTitle": "Outcome",
+        "conclusion": "Your business is ready to accept cryptocurrency as a full-fledged payment method."
       },
       {
         "id": 11,
-        "title": "Персональный крипто-менеджер",
-        "decisionTitle": "Ваш эксперт по управлению и безопасности",
-        "decision": "Вы получаете выделенного специалиста, который берёт на себя все задачи по управлению и защите ваших криптоактивов. Это позволяет сосредоточиться на стратегии и развитии, не отвлекаясь на рутину.",
-        "functionsTitle": "Обязанности менеджера",
+        "title": "Personal Crypto Manager",
+        "decisionTitle": "Role",
+        "decision": "We provide a dedicated specialist who handles all routine tasks related to managing and securing your crypto assets. This allows you to free up time and resources for strategic business development.",
+        "functionsTitle": "Responsibilities",
         "functions": [
-          "Комплексное управление — проведение транзакций, диверсификация портфеля, управление стейкингом.",
-          "Постоянный контроль безопасности — соблюдение всех security-протоколов и своевременные обновления систем.",
-          "Мониторинг — отслеживание рыночных трендов, киберугроз и изменений законодательства.",
-          "Прозрачная отчётность — регулярные детальные отчёты о состоянии активов."
+          "Comprehensive management: The expert conducts transactions, diversifies the portfolio, and manages staking.",
+          "Continuous security monitoring: The manager ensures compliance with all security protocols and timely system updates.",
+          "Monitoring: The specialist tracks market trends, new cyber threats, and legal changes.",
+          "Transparent reporting: You receive detailed and clear reports on your assets' status regularly."
         ],
-        "conclusionTitle": "Ценность",
-        "conclusion": "Вы экономите время и получаете уверенность в полной безопасности ваших криптофондов."
+        "conclusionTitle": "Value",
+        "conclusion": "You save time and gain absolute confidence in the security of your crypto funds."
       },
       {
         "id": 12,
-        "title": "Мультиподпись и политика доступа",
-        "decisionTitle": "Надёжный контроль над активами",
-        "decision": "Мы внедряем систему многофакторного утверждения транзакций, которая требует нескольких подписей для подтверждения операций. Это устраняет риски, связанные с единичной точкой отказа.",
-        "functionsTitle": "Реализация",
+        "title": "Multi-Signature and Access Policy",
+        "decisionTitle": "Overview",
+        "decision": "We implement a multi-factor transaction approval system. This key security mechanism requires multiple signatures to authorize operations, eliminating single points of failure.",
+        "functionsTitle": "Implementation",
         "functions": [
-          "Установка — настройка мультиподписного кошелька (например, Gnosis Safe) для вашего бизнеса.",
-          "Разработка политик — создание гибких правил утверждения, адаптированных под масштабы и риски операций.",
-          "Распределение ролей — чёткое разграничение прав доступа и подписи среди сотрудников.",
-          "Защита от внутренних и внешних угроз — один скомпрометированный ключ не даст злоумышленникам доступ к активам."
+          "Setup: Configuring a multi-signature wallet (e.g., Gnosis Safe) for your business.",
+          "Policy development: Creating flexible approval rules (e.g., '2 of 3' or '3 of 5') adapted to transaction volume and criticality.",
+          "Role distribution: Defining and segregating access rights and signatures among employees to prevent unauthorized actions."
         ],
-        "conclusionTitle": "Результат",
-        "conclusion": "Ваши средства под надёжным контролем — каждая операция подтверждается несколькими сторонами, исключая риск одиночных ошибок или злоупотреблений."
+        "conclusionTitle": "Protection Against",
+        "conclusion": "Internal fraud and external attacks. A single compromised key will not give attackers access to your assets."
       },
       {
         "id": 13,
-        "title": "Аудит безопасности сайта",
-        "decisionTitle": "Защита вашего имиджа и данных",
-        "decision": "Мы проводим детальный аудит корпоративного сайта или лендинга, чтобы выявить и устранить уязвимости до того, как ими воспользуются злоумышленники.",
-        "functionsTitle": "Наши методы",
+        "title": "Website Security Audit",
+        "decisionTitle": "Focus",
+        "decision": "We conduct a targeted audit of your corporate website or landing page to identify and fix vulnerabilities before attackers exploit them.",
+        "functionsTitle": "Our Methods",
         "functions": [
-          "Пентест — тестирование на проникновение с проверкой XSS, SQL-инъекций, CSRF и других уязвимостей.",
-          "Анализ конфигураций — аудит серверных настроек, SSL-сертификатов и заголовков безопасности.",
-          "Оценка фишинговых рисков — проверка на возможность клонирования сайта и обхода DNS.",
-          "Разработка рекомендаций — чёткий план устранения всех обнаруженных проблем."
+          "Penetration testing: Identifying critical vulnerabilities such as XSS, SQL injections, and CSRF.",
+          "Configuration analysis: Checking server settings, SSL certificates, and security headers to ensure system reliability.",
+          "Phishing risk assessment: Analyzing risks related to cloning your resource and DNS bypass.",
+          "Recommendation development: Providing a clear action plan to fix all identified issues."
         ],
-        "conclusionTitle": "Результат",
-        "conclusion": "Ваш сайт получает надёжную защиту от фишинговых атак, взломов и утечек данных — а ваш бренд сохраняет безупречную репутацию."
+        "conclusionTitle": "Outcome",
+        "conclusion": "You gain reliable protection for your reputation and your clients’ data against phishing attacks and hacks."
       }
     ]
   },
@@ -538,6 +537,7 @@
     "communicationValue": "Номер телефона или имя пользователя",
     "message": "Сообщение",
     "iAgree": "Я согласен на обработку",
-    "personalData": "Персональных данных"
+    "personalData": "Персональных данных",
+    "successRequest": "Спасибо, ваша заявка отправлена. Мы свяжемся с вами в ближайшее время."
   }
 }

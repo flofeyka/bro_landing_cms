@@ -537,6 +537,7 @@
     "communicationValue": "Phone number or username",
     "message": "Message",
     "iAgree": "I agree to the processing of",
-    "personalData": "Personal Data"
+    "personalData": "Personal Data",
+    "successRequest": "Thank you, your request has been submitted. We will contact you shortly."
   }
 }

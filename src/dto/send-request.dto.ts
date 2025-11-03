@@ -1,4 +1,4 @@
-import { IsEmail, IsEnum, IsString } from 'class-validator';
+import { IsEmail, IsEnum, IsOptional, IsString } from 'class-validator';
 
 enum CommunicationWay {
   telegram = 'TELEGRAM',
@@ -13,6 +13,7 @@ export class SendRequestDto {
   email: string;
 
   @IsString()
+  @IsOptional()
   message: string;
 
   @IsEnum(CommunicationWay)
