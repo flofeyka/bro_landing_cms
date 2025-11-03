@@ -11,12 +11,12 @@ import { MailerModule } from '@nestjs-modules/mailer';
     TextModule,
     MailerModule.forRoot({
       transport: {
-        host: 'smtp.gmail.com',
+        host: process.env.EMAIL_HOST,
         port: 465,
         secure: true,
         auth: {
-          user: 'danilbashirov0@gmail.com',
-          pass: 'lptb oatd bnyk efhr',
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASSWORD,
         },
       },
     }),
