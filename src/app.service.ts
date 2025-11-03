@@ -9,25 +9,26 @@ export class AppService {
   constructor(private readonly mailerService: MailerService) {}
 
   async sendRequest(dto: SendRequestDto): Promise<SuccessRdo> {
-    await this.mailerService.sendMail({
-      to: dto.email,
-      subject: 'Ваш запрос принят',
-      text: `Здравствуйте, ${dto.fullName}! Благодарим за ваше обращение. Мы уже анализируем ваш запрос и скоро свяжемся с вами.`,
-    });
+    await Promise.all([
+      await this.mailerService.sendMail({
+        to: dto.email,
+        subject: 'Ваш запрос принят',
+        text: `Здравствуйте, ${dto.fullName}! Благодарим за ваше обращение. Мы уже анализируем ваш запрос и скоро свяжемся с вами.`,
+      }),
 
-    // Отправка оператору
-    await this.mailerService.sendMail({
-      to: 'info@brosecurity.xyz',
-      subject: 'Новая заявка с сайта',
-      html: `
-        <h3>Новая заявка</h3>
-        <p><b>Имя:</b> ${dto.fullName}</p>
-        <p><b>Email:</b> ${dto.email}</p>
-        <p><b>Сообщение:</b> ${dto.message}</p>
-        <p><b>Способ связи:</b> ${dto.communicationWay}</p>
-        <p><b>Контакт:</b> ${dto.communicationValue}</p>
-      `,
-    });
+      await this.mailerService.sendMail({
+        to: 'info@brosecurity.xyz',
+        subject: 'Новая заявка с сайта',
+        html: `
+            <h3>Новая заявка</h3>
+            <p><b>Имя:</b> ${dto.fullName}</p>
+            <p><b>Email:</b> ${dto.email}</p>
+            <p><b>Сообщение:</b> ${dto.message}</p>
+            <p><b>Способ связи:</b> ${dto.communicationWay}</p>
+            <p><b>Контакт:</b> ${dto.communicationValue}</p>
+          `,
+      }),
+    ]);
 
     return fillDto(SuccessRdo, { success: true });
   }
